@@ -1,0 +1,101 @@
+html{
+	font-size:20px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #d3e1ee;
+    /* animation:colorchange 5s infinite; */
+    /* animation-name: colorchange; */
+    animation-duration: 3s;
+}
+
+@keyframes colorchange{
+    0% {background-color: #d3e1ee}
+    100%{background-color: #ff9999}
+}
+
+@keyframes flashred{
+    0% {background-color: #ff9999}
+    25%{background-color: white}
+    50%{background-color: #ff9999}
+    75%{background-color: white}
+    100%{background-color: #ff9999}
+}
+
+@keyframes flashblue{
+    0% {background-color: #d3e1ee}
+    25%{background-color: gray}
+    50%{background-color: #d3e1ee}
+    75%{background-color: gray}
+    100%{background-color: #d3e1ee}
+}
+
+
+table,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    /* border-style: dotted; */
+    text-align: center;
+    /* transform: rotate(20deg); */
+    
+}
+#toptable,#hightable,#lowtable,#bottable{
+    width: 5em;
+    height: 5em;
+    box-shadow: 5px 10px;
+    transform: rotate3d(1,0,1, 45deg);
+    /* margin-left: 10em; */
+    margin: auto;
+}
+h4,h2,#instrucButton,#player_header{
+    text-align: center;
+}
+
+#overlay,#instructions{
+    position: fixed;
+    display: none;
+    width: 50%;
+    height: 50%;
+    top: 30%; 
+    left: 25%;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 2;
+}
+
+#overlaytext,#InstructionText{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: black;
+    padding: 10px;
+}
+#inner{
+    top: 50px;
+}
+#gamestats{
+    border:5px solid black;
+}
+
+#button_wrapper{
+    border: none;
+    background-color: none;
+    color: rgb(96, 73, 126);
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#instrucButton{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(135, 142, 202);
+    color: black;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html id="htmlid">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel = "stylesheet" href = "/CSS/all.css">
+    <link rel = "stylesheet" href = "/CSS/home.css">
+  </head>
+  <body onbeforeunload="closeTab()">
+    <h3>Home</h3>
+    <div id = "header_wrapper">
+        <h4>Cmpt 218 Assignment 4 Author: akc29</h4> 
+    </div>
+    <nav>
+      <ul>
+        <li id="Logout"><a href="/Login/Login.html">Logout</a></li>
+        <li id="Game" onclick="LoadGame()">Start/Join Game</li>
+      </ul>
+    </nav>
+    <h3 id = "UsernameHead"></h3>
+    STATS:
+    <br>
+    <table id="tab"></table>
+        
+    <script src ="/jquery.min.js"></script>
+    <script src="/socket.io.min.js"></script>
+    <script src="/Home/homeJS.js"></script>
+    <script>
+    
+    </script>
+    
+  </body>
+</html>

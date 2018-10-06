@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html id="htmlid">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel = "stylesheet" href = "/CSS/all.css">
+    <link rel = "stylesheet" href = "/CSS/Login.css">
+  </head>
+  <body>
+    <h3>Login</h3>
+    <div id = "header_wrapper">
+        <h4>Cmpt 218 Assignment 4 Author: akc29</h4> 
+    </div>
+    
+    <p id='text'></p>
+
+    <form onsubmit ="return false;">
+      Username:<br>
+      <input type="text" id="Username" name="Username" placeholder="Username" />
+      <br>Password:<br>
+      <input type="password" id="Password" name="Password" placeholder="Password" />
+      <br>
+      <div id="RegInfo">
+          <button onclick="Login()">LOGIN</button>
+      </div>
+
+      <p onclick = "BeginReg()" id = "Registration">Register Here!</p>
+    </form>
+
+
+    <script src ="/jquery.min.js"></script>
+    <script src="/socket.io.min.js"></script>
+    <script src="/Login/LoginJS.js"></script>
+    <script>
+    
+    </script>
+    
+  </body>
+</html>

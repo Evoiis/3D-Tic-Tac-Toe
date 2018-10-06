@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html id="htmlid">
+  <head>
+    <meta charset="utf-8">
+    <title>3D Tic Tac Toe</title>
+    <!-- <link rel = "stylesheet" href = "/CSS/all.css"> -->
+    <link rel = "stylesheet" href = "/CSS/game.css">
+  </head>
+  <body onbeforeunload="closeTab()">
+    <h2>3D Tic Tac Toe</h2>
+    <div id = "header_wrapper">
+        <h4>Cmpt 218 Assignment 4 Author: akc29</h4>
+    </div>  
+
+    <div id="player_header">
+      <button id="instrucButton" onclick="$('#instructions').css('display','block')">Instructions</button>
+      <h5>You will lose if you quit while the game is in progress!!</h5>
+      <h5 id = "phtext"></h5>
+      <h5 id = "currMove"></h5>
+    </div>
+
+    <br><br>
+    <div id="gameboard">
+      <table id="toptable">
+        <tr> <td onclick = 'activate(0,0)'></td> <td onclick = 'activate(0,1)'></td> <td onclick = 'activate(0,2)'></td> <td onclick = 'activate(0,3)'></td> </tr>
+        <tr> <td onclick = 'activate(0,4)'></td> <td onclick = 'activate(0,5)'></td> <td onclick = 'activate(0,6)'></td> <td onclick = 'activate(0,7)'></td> </tr>
+        <tr> <td onclick = 'activate(0,8)'></td> <td onclick = 'activate(0,9)'></td> <td onclick = 'activate(0,10)'></td> <td onclick = 'activate(0,11)'></td> </tr>
+        <tr> <td onclick = 'activate(0,12)'></td> <td onclick = 'activate(0,13)'></td> <td onclick = 'activate(0,14)'></td> <td onclick = 'activate(0,15)'></td> </tr>    
+
+      </table>
+      <br>
+      <table id="hightable">
+        <tr> <td onclick = 'activate(1,0)'></td> <td onclick = 'activate(1,1)'></td> <td onclick = 'activate(1,2)'></td> <td onclick = 'activate(1,3)'></td> </tr>
+        <tr> <td onclick = 'activate(1,4)'></td> <td onclick = 'activate(1,5)'></td> <td onclick = 'activate(1,6)'></td> <td onclick = 'activate(1,7)'></td> </tr>
+        <tr> <td onclick = 'activate(1,8)'></td> <td onclick = 'activate(1,9)'></td> <td onclick = 'activate(1,10)'></td> <td onclick = 'activate(1,11)'></td> </tr>
+        <tr> <td onclick = 'activate(1,12)'></td> <td onclick = 'activate(1,13)'></td> <td onclick = 'activate(1,14)'></td> <td onclick = 'activate(1,15)'></td> </tr>
+          
+
+      </table>
+      <br>
+      <table id="lowtable">
+        <tr> <td onclick = 'activate(2,0)'></td> <td onclick = 'activate(2,1)'></td> <td onclick = 'activate(2,2)'></td> <td onclick = 'activate(2,3)'></td> </tr>
+        <tr> <td onclick = 'activate(2,4)'></td> <td onclick = 'activate(2,5)'></td> <td onclick = 'activate(2,6)'></td> <td onclick = 'activate(2,7)'></td> </tr>
+        <tr> <td onclick = 'activate(2,8)'></td> <td onclick = 'activate(2,9)'></td> <td onclick = 'activate(2,10)'></td> <td onclick = 'activate(2,11)'></td> </tr>
+        <tr> <td onclick = 'activate(2,12)'></td> <td onclick = 'activate(2,13)'></td> <td onclick = 'activate(2,14)'></td> <td onclick = 'activate(2,15)'></td> </tr>
+          
+
+      </table>
+      <br>
+      <table id="bottable" style="box-shadow: 0px 0px">
+        <tr> <td onclick = 'activate(3,0)'></td> <td onclick = 'activate(3,1)'></td> <td onclick = 'activate(3,2)'></td> <td onclick = 'activate(3,3)'></td> </tr>
+        <tr> <td onclick = 'activate(3,4)'></td> <td onclick = 'activate(3,5)'></td> <td onclick = 'activate(3,6)'></td> <td onclick = 'activate(3,7)'></td> </tr>
+        <tr> <td onclick = 'activate(3,8)'></td> <td onclick = 'activate(3,9)'></td> <td onclick = 'activate(3,10)'></td> <td onclick = 'activate(3,11)'></td> </tr>
+        <tr> <td onclick = 'activate(3,12)'></td> <td onclick = 'activate(3,13)'></td> <td onclick = 'activate(3,14)'></td> <td onclick = 'activate(3,15)'></td> </tr>
+          
+
+      </table>
+    </div>
+    
+    <div id="instructions" style = "display: block">
+        <div id="InstructionText">
+          
+          <p id = "inner">
+            <h3>Instructions</h3>
+            Welcome to 3D Tic Tac Toe:<br>
+            The first player to create a line of 4 wins!<br>
+            The line can be horizontal, vertical or diagonal on any single board or
+            vertically in a column or diagonally through 4 boards.<br>
+            The most recent move is outlined by a thicker border.
+          </p>
+          <button onclick="$('#instructions').css('display','none')" style="text-align: right">OK!</button>
+        </div>
+    </div>
+
+    <div id="overlay">
+      <div id="overlaytext">
+        <table id="gamestats">
+          <tr><td colspan="2" id="winner"></td></tr>
+          <tr><td id="player1"></td><td id="player2"></td></tr>
+          <tr><td colspan="2">Number of Moves:</td></tr>
+          <tr><td id="pMoves"></td><td id="oMoves"></td></tr>
+          <tr><td colspan="2">Win/Loss Record:</td></tr>
+          <tr><td id="pRec"></td><td id="oRec"></td></tr>
+        </table>
+        <br><br>
+        <div id="button_wrapper">
+          <p id="PlayAgain" onclick="window.location.href='/TTT/game.html'">Play Again</button>
+          <p id="LeaveGame" onclick="Finish(false)" >Back To Home</p>
+          <p id="Logout" onclick="Finish(true)" >Logout</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src ="/jquery.min.js"></script>
+    <script src="/socket.io.min.js"></script>
+    <script src="/TTT/gameJS.js"></script>
+  </body>
+</html>

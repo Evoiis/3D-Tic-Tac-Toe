@@ -4,10 +4,12 @@ nodeJS server serving a Multiplayer 3D Tic Tac Toe Game using MongoDB to store d
 
 ## Installation
 1 Clone repository
+
 2 Install nodeJS
 
 ## Execution
 Run this command from the repository folder.
+
 `node server.js`
 
 
